@@ -1,0 +1,432 @@
+/* Font de titulo de navbar */
+@import url('https://fonts.googleapis.com/css2?family=Alice&family=Cedarville+Cursive&family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Shrikhand&family=Truculenta:opsz,wght@12..72,100..900&display=swap');
+/* Font de links de navbar */
+@import url('https://fonts.googleapis.com/css2?family=Alice&family=Cedarville+Cursive&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Shrikhand&family=Truculenta:opsz,wght@12..72,100..900&display=swap');
+/* Font de h1 */
+@import url('https://fonts.googleapis.com/css2?family=Alice&family=Cedarville+Cursive&family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Shrikhand&family=Truculenta:opsz,wght@12..72,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --font-nav-links: "Montserrat", sans-serif;
+    --font-nav-title: "Crimson Pro", serif;
+    --font-main-h1: "Lora", serif;
+}
+body{
+    background-color: #181719;
+    max-width: 1440px;
+}
+.header{
+    padding: 10px 70px;
+    justify-content: center;
+}
+
+.header .navbar{
+    display: flex;
+    justify-content: space-between ;
+    align-items: center;
+
+    & .title-nav{
+        border: solid 1px #fff;
+        padding: 8px;
+        & p{
+            color: #fff;
+            font-weight: 200;
+            font-size: 14px;
+            font-family: var( --font-nav-title);
+            height: 16px;
+
+        }
+    }
+
+    & .info-nav ul{
+        display:flex;
+        gap:40px;
+        & li{
+            list-style: none;
+            & a{
+                font-family: var(--font-nav-links);
+                text-decoration: none;
+                font-size: 18px;
+                color: #fff;
+                font-weight: 500;
+            }
+        }
+        
+    }
+    & .menu{
+        display: none;
+    }
+}
+.info-nav .item.active a,
+.item a:hover{
+    font-weight: 700;
+    border-bottom: solid 2px #fff;
+
+}
+main{
+    padding: 100px 70px;
+
+}
+.principal{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+
+    & .info-principal{
+        width: 100%;
+        position: relative;
+
+        & h1{
+            color: #fff;
+            font-size: 48px;
+            font-weight: 500;
+            font-family: var(--font-main-h1);
+            margin-bottom: 30px;
+        }
+        & p{
+            text-align: start;
+            color: #fff;
+            font-size: 24px;
+            font-weight: 400;
+            font-family: var(--font-nav-links) ;
+            max-width:364px;
+            line-height: 29px;
+            margin-bottom: 30px;
+        }
+        
+
+        & a{
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 18px;
+            color: #fff;
+            position: relative;
+            & span{
+                position: absolute;
+                top: -1px;
+                right: -20px;
+            }
+        }
+    }
+
+    & .img-principal{
+        width: 100%;
+        & img{
+            width: 640px;
+            height: 455px;
+        }
+    }
+    & .user{
+        position: absolute;
+        right: 100px;
+        bottom: -90px;
+        background-color: #181719;
+        padding: 20px 70px 30px 20px;
+        width: 400px;
+        height: 190px;
+        & .container-user{
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-left: 8px;
+            margin-bottom: 1.5rem;
+            & .img-user img{
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+            }
+
+            & .info-user{
+
+                & h5{
+                    color: #fff;
+                    font-size: 14px;
+                    font-weight: 500;
+                    font-family: var(--font-nav-links);
+                    line-height: 17px;
+                    margin-bottom: 5px;
+                }
+                & p{
+                    color: #828282;
+                    font-size: 12px;
+                    font-weight: 500;
+                    font-family: var(--font-nav-links);
+                    line-height: 14px;
+                }
+            }
+        }
+        & .info2-user{
+            & p{
+                font-size: 24px;
+                color: #fff;
+                font-family: var(--font-main-h1);
+                font-weight: 700;
+                max-width: 250px;
+                
+            }
+        }
+    }
+   
+}
+
+@media screen and (max-width: 1200px) {
+    
+    .principal .img-principal img{
+        width: 540px;
+        height: 400px;
+    }
+    .principal .user{
+        right: 40px;
+        width: 350px;
+        height: 150px;
+        & .container-user{
+            gap: 10px;
+            height: 10px;
+            padding: 10px 20px 30px 10px;
+            margin-bottom: 5px;
+
+            & .img-user img{
+                width: 30px;
+                height: 30px;
+            }
+
+            & .info-user{
+
+                & h5{
+                    color: #fff;
+                    font-size: 12px;
+                    margin-bottom: 1px;
+                }
+                & p{
+                    font-size: 8px;
+                }
+            }
+        }
+        & .info2-user{
+            & p{
+                font-size: 24px;
+                color: #fff;
+                font-family: var(--font-main-h1);
+                font-weight: 700;
+                max-width: 250px;
+                
+            }
+        }
+        & .info2-user{
+            & p{
+                font-size: 18px;
+                max-width: 200px;
+                
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 1070px){
+    
+    .principal .img-principal img{
+        width: 440px;
+        height: 300px;
+    }
+    .principal .user{
+        right: 40px;
+        width: 300px;
+        height: 150px;
+    }
+    
+    .principal .info-principal{
+        & h1{
+            font-size: 28px;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+        & p{
+          
+    
+            font-size: 18px;
+            font-weight: 300;
+            max-width:270px;
+            line-height: 29px;
+            margin-bottom: 30px;
+        }
+    }
+
+}
+@media screen and (max-width: 860px){
+    .header{
+        padding: 10px 20px;
+    }
+    .header .navbar .menu {
+        display: block;
+        & i{
+            color: #fff;
+            font-size: 26px;
+        }
+    }
+.header .navbar.active{
+
+        
+    & .info-nav{
+        display: block;
+        position:absolute;
+        right: 0;
+        top: 0;
+        padding: 70px 30px;
+        background-color: #181719;
+        z-index: 1;
+        height: 100%;
+        gap:10px;
+        & ul{
+            display: flex;
+            flex-direction: column;
+        }
+        & .close-menu{
+
+            color: #fff;
+            font-size: 23px;
+            position: absolute;
+            top: 20px;
+            right: 15px;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+}  
+.header .navbar .info-nav{
+    display: none;
+    position:absolute;
+    right: 0;
+    top: 0;
+    padding: 70px 30px;
+    background-color: #181719;
+    z-index: 1;
+    height: 100%;
+    gap:10px;
+    & ul{
+        display: flex;
+        flex-direction: column;
+    }
+    & .close-menu{
+        color: #fff;
+        font-size: 23px;
+        position: absolute;
+        top: 20px;
+        right: 15px;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}
+    
+    main{
+        padding: 40px 20px;
+     }
+
+    .principal{
+        display: flex;
+        flex-direction: column;
+    }
+    .principal .img-principal img{
+        width: 100%;
+        height: 360px;
+        object-fit: cover;
+    }
+    .principal .info-principal{
+        margin-bottom: 20px;
+        & h1{
+            font-size: 48px;
+            font-weight: 400;
+            margin-bottom: 30px;
+        }
+        & p{
+          
+    
+            font-size: 18px;
+            font-weight: 300;
+            max-width:270px;
+            line-height: 29px;
+            margin-bottom: 30px;
+        }
+        & a{
+            font-size: 16px;
+        }
+    }
+
+    .principal .user{
+        bottom: -130px;
+        width: 500px;
+        height: 190px;
+
+        & .container-user{
+            gap: 15px;
+
+            & .img-user img{
+                width: 40px;
+                height: 40px;
+                }
+
+            & .info-user{
+                & h5{
+                    font-size: 14px;
+                }
+                & p{
+                    font-size: 12px;
+                }
+            }
+        }
+        & .info2-user{
+            & p{
+                font-size: 24px;
+                max-width: 250px;
+            }
+        }
+    }
+    
+}
+
+@media screen and (max-width: 590px){
+
+    .principal .info-principal{
+        & a{
+
+            font-size: 20px;
+        }
+    }
+    .principal .user{
+        bottom: -90px;
+        width: 390px;
+        height: 150px;
+
+        & .container-user{
+            gap: 10px;
+
+            & .img-user img{
+                width: 30px;
+                height: 30px;
+                }
+
+            & .info-user{
+                & h5{
+                    font-size: 14px;
+                }
+                & p{
+                    font-size: 12px;
+                }
+            }
+        }
+        & .info2-user{
+            & p{
+                font-size: 24px;
+                max-width: 250px;
+            }
+        }
+    }
+    
+}
