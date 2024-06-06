@@ -430,3 +430,45 @@ main{
     }
     
 }
+
+@media screen and (max-width: 490px){
+
+    .principal .info-principal{
+        & h1{
+            font-size: 38px;
+        }
+        & p{
+            font-size: 14px;
+        }
+    }
+
+    .principal .user{
+        right: 10px;
+        bottom: -60px;
+        width: 280px;
+        height: 120px;
+        & .container-user{
+            gap: 5px;
+            margin-left: 0;
+            & .img-user img{
+                width: 30px;
+                height: 30px;
+                }
+
+            & .info-user{
+                & h5{
+                    font-size: 12px;
+                }
+                & p{
+                    font-size: 10px;
+                }
+            }
+        }
+        & .info2-user{
+            & p{
+                font-size: 18px;
+            }
+        }
+    }
+
+}
