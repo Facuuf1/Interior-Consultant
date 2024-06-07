@@ -61,7 +61,7 @@ body{
         display: none;
     }
 }
-.info-nav .item.active a,
+
 .item a:hover{
     font-weight: 700;
     border-bottom: solid 2px #fff;
